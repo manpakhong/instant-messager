@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+	<proxool>
+		<!-- 连接池的别名  -->
+		<alias>proxool</alias>
+		<!-- proxool只能管理由自己产生的连接  -->
+		<driver-url>jdbc:oracle:thin:@cmsdevdb01.hkbh.org.hk:1521/cmsdev</driver-url>
+		<!--JDBC驱动程序-->
+		<driver-class>oracle.jdbc.OracleDriver</driver-class>
+		<!-- 用户名与密码 -->
+		<driver-properties>
+			<property name="user" value="cmsapps" />
+			<property name="password" value="cmsadmin" />
+		</driver-properties>
+		<!-- 允许最大连接数 ,默认是15,这里设置为20-->
+		<maximum-connection-count>20</maximum-connection-count>
+		<!-- 最小连接数 ,默认是5,其实可以不用声明它-->
+		<minimum-connection-count>5</minimum-connection-count>
+		<!-- 测试连接的sql语句 -->
+		<house-keeping-test-sql>select sysdate from dual</house-keeping-test-sql>
+	</proxool>
+</something-else-entirely>

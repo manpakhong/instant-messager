@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hk.org.hkbh.cms.im.models.eos.Student" table="STUDENT" node="stu">
+		<id name="id" column="ID" type="int" node="@stuId">
+			<generator class="sequence">
+				<!-- seq_student就是表student的主键自增的sequence -->
+				<param name="sequence">seq_student</param>
+			</generator>
+		</id>
+		<property name="name" column="name" type="string" node="myStudent/@name" />
+		<property name="address" column="address" type="string" node="address" />
+		<property name="age" column="age" type="int" node="myStudent/@age" />
+	</class>
+</hibernate-mapping>
