@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="hk.org.hkbh.cms.im.models.eos.Student" table="STUDENT" node="stu">
+	<class name="hk.org.hkbh.cms.im.models.eos.Student" table="CMSAPPS.OP_USER" node="stu">
 		<id name="id" column="ID" type="int" node="@stuId">
 			<generator class="sequence">
 				<!-- seq_student就是表student的主键自增的sequence -->

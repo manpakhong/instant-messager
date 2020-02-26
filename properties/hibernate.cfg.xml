@@ -3,7 +3,8 @@
     PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
     "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory name="sessionFactory">
+<!-- 	<session-factory name="sessionFactory"> -->
+	<session-factory >
 		<property name="hibernate.connection.provider_class">
 			org.hibernate.connection.ProxoolConnectionProvider
 		</property>
@@ -14,8 +15,8 @@
 		<!-- 格式化sql -->
 		<property name="hibernate.format_sql">true</property>
 		<!--指定数据库适配器 -->
-		<property name="dialect"> org.hibernate.dialect.OracleDialect </property>
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<!-- 映射文件 -->
-		<mapping resource="Student.hbm.xml" />
+        <mapping class="hk.org.hkbh.cms.im.models.eos.OpUserEo"></mapping>
 	</session-factory>
 </hibernate-configuration>
