@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.SessionFactoryBuilder;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
@@ -110,8 +111,10 @@ public class HibernateUtils {
 				// Create Metadata
 				Metadata metadata = sources.getMetadataBuilder().build();
 
+				SessionFactoryBuilder sessionFactoryBuilder = metadata.getSessionFactoryBuilder();
+				
 				// Create SessionFactory
-				sessionFactory = metadata.getSessionFactoryBuilder().build();
+				sessionFactory = sessionFactoryBuilder.build();
 
 			} catch (Exception e) {
 				logger.error(getClassName() + ".getSessionFactory() - ", e);
@@ -151,8 +154,6 @@ public class HibernateUtils {
 					session = sessionFactory.openSession();
 				}
 			}
-			
-			
 			increaseCurrentSessionCount();
 			
 			printStackTrace(getClassName() + ".getSession() - open ----> session" + session);
