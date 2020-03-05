@@ -137,7 +137,7 @@
 		<hibernate.validator>5.4.1.Final</hibernate.validator>
 		<hibernate.annotation>5.1.0.Final</hibernate.annotation>
 		<hibernate-proxool.version>5.4.12.Final</hibernate-proxool.version>
-		<spring.version>5.2.2.RELEASE</spring.version>
+		<spring.version>5.2.4.RELEASE</spring.version>
 		<spring-security.version>5.2.2.RELEASE</spring-security.version>
 		<spring-data-jpa.version>1.11.3.RELEASE</spring-data-jpa.version>
         <h2.version>1.4.197</h2.version>
