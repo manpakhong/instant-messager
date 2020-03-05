@@ -2,7 +2,6 @@ package hk.org.hkbh.cms.im.utils;
 
 import java.util.Arrays;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -10,11 +9,13 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.SessionFactoryBuilder;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import hk.org.hkbh.cms.im.daos.orm.interceptors.AuditInterceptor;
 
 public class HibernateUtils {
-	private final static Logger logger = Logger.getLogger(getClassName());
+    private final static Logger logger = LoggerFactory.getLogger(getClassName());
 	private static StandardServiceRegistry registry;
 	private static SessionFactory sessionFactory;
 	private static int currentSessionCount;

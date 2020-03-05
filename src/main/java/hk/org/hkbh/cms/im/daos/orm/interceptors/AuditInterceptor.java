@@ -3,14 +3,15 @@ package hk.org.hkbh.cms.im.daos.orm.interceptors;
 import java.io.Serializable;
 import java.util.Arrays;
 
-import org.apache.log4j.Logger;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.Transaction;
 import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.hibernate.type.Type;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AuditInterceptor extends EmptyInterceptor {
-	private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClassName());
 	private String getClassName(){
 		return this.getClass().getName();
 	}	
@@ -59,7 +60,7 @@ public class AuditInterceptor extends EmptyInterceptor {
 //        if ( entity instanceof Auditable ) {
 //            loads++;
 //        }
-    	logger.info(entity);
+    	logger.info(entity.toString());
         return false;
     }
 

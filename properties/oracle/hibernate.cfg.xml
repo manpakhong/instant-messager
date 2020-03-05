@@ -15,8 +15,8 @@
 		<!-- 格式化sql -->
 		<property name="hibernate.format_sql">true</property>
 		<!--指定数据库适配器 -->
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<!-- 映射文件 -->
-        <!--  <mapping class="hk.org.hkbh.cms.im.models.eos.OpUserEo"></mapping> -->
+        <mapping class="hk.org.hkbh.cms.im.models.eos.OpUserEo"></mapping>
 	</session-factory>
 </hibernate-configuration>
